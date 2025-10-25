@@ -1,6 +1,17 @@
 import { X, Plus, Minus, Trash2, CreditCard, Lock } from 'lucide-react'
 
-export default function Cart({ open, onClose, items, onIncrement, onDecrement, onRemove, total, onCheckout, requiresAuth, onRequireAuth }) {
+export default function Cart({
+  open,
+  onClose,
+  items,
+  onIncrement,
+  onDecrement,
+  onRemove,
+  total,
+  onCheckout,
+  requiresAuth,
+  onRequireAuth,
+}) {
   return (
     <div className={`fixed inset-0 z-40 ${open ? '' : 'pointer-events-none'}`} aria-hidden={!open}>
       <div
@@ -38,11 +49,17 @@ export default function Cart({ open, onClose, items, onIncrement, onDecrement, o
                     </button>
                   </div>
                   <div className="mt-2 inline-flex items-center gap-2">
-                    <button onClick={() => onDecrement(item.id)} className="h-8 w-8 inline-flex items-center justify-center rounded-md border hover:bg-slate-50">
+                    <button
+                      onClick={() => onDecrement(item.id)}
+                      className="h-8 w-8 inline-flex items-center justify-center rounded-md border hover:bg-slate-50"
+                    >
                       <Minus className="h-4 w-4" />
                     </button>
                     <span className="min-w-[24px] text-center">{item.quantity}</span>
-                    <button onClick={() => onIncrement(item.id)} className="h-8 w-8 inline-flex items-center justify-center rounded-md border hover:bg-slate-50">
+                    <button
+                      onClick={() => onIncrement(item.id)}
+                      className="h-8 w-8 inline-flex items-center justify-center rounded-md border hover:bg-slate-50"
+                    >
                       <Plus className="h-4 w-4" />
                     </button>
                   </div>

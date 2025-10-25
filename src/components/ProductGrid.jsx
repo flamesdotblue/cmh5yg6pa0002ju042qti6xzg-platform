@@ -21,9 +21,16 @@ export default function ProductGrid({ products, loading, onAddToCart }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((p) => (
-        <article key={p.id} className="group border rounded-xl overflow-hidden bg-white hover:shadow-sm transition-shadow">
+        <article
+          key={p.id}
+          className="group border rounded-xl overflow-hidden bg-white hover:shadow-sm transition-shadow"
+        >
           <div className="aspect-[4/3] bg-slate-100 overflow-hidden">
-            <img src={p.image} alt={p.name} className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform" />
+            <img
+              src={p.image}
+              alt={p.name}
+              className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform"
+            />
           </div>
           <div className="p-4">
             <h3 className="font-medium">{p.name}</h3>
